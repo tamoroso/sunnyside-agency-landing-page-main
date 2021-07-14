@@ -1,0 +1,19 @@
+{
+  "name": "sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamoroso/sunnyside-agency-landing-page-main.git"
+  },
+  "author": "Thomas Amoroso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamoroso/sunnyside-agency-landing-page-main/issues"
+  },
+  "homepage": "https://github.com/tamoroso/sunnyside-agency-landing-page-main#readme"
+}
