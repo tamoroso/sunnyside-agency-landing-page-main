@@ -1,0 +1,44 @@
+@use '../utilities/variables' as *;
+
+footer{
+    background: adjust-color($color: $footer-bg, $saturation: 30%, $alpha:-0.5%);  
+}
+
+.footer{
+    height: 30vh;
+    &__logo{
+        fill: $footer-bg;
+    }
+    & svg{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.footer__nav{
+    & ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        max-width: 20%;
+        margin: 2em auto;
+        color: $footer-bg;
+    }
+}
+
+.footer__social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
+    & a{
+        padding : 0 1em;
+    }
+    &--hover path{
+        transition: ease-in-out 200ms;
+    }
+    &--hover:hover path{
+        fill: white;
+    }
+}

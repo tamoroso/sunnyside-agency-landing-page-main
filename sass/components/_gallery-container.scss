@@ -1,0 +1,12 @@
+@use '../utilities/variables' as *;
+
+.gallery-container{
+    display: flex;
+    padding-bottom: 3em;
+    & img{
+        object-fit: cover;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}

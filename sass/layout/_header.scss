@@ -1,0 +1,11 @@
+@use '../utilities/variables' as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    width: 100%;
+    color: $neutral-color-5;
+
+}

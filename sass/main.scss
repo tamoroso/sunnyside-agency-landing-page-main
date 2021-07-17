@@ -1,0 +1,12 @@
+@use './utilities/variables' as *;
+@use './base/reset' as *;
+@use './base/typography' as *;
+
+@use './components/hero-banner' as *;
+@use './layout/header' as *;
+@use './components/nav-menu' as *;
+@use './components/grid' as *;
+@use './layout/testimonials' as *;
+@use './components/clients-card' as *;
+@use './components/gallery-container' as *;
+@use './layout/footer' as *;

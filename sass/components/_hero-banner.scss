@@ -1,0 +1,27 @@
+@use '../utilities/variables' as *;
+@use '../base/typography' as *;
+
+.hero-banner{
+    background-image: url('../../images/desktop/image-header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 3em;
+    &__big-title{
+        padding-top: 1.5em ;
+        text-align: center;
+        font-size: 70px;
+        font-family: $title-font;
+        color: $neutral-color-5;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    &__arrow-down{
+        display: flex;
+        position: relative;
+        top: 14%;
+        margin: auto;
+        text-align: center;
+    }
+}

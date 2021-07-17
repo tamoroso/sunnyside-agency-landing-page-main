@@ -1,0 +1,25 @@
+@use '../utilities/variables' as *;
+@use '../base/typography' as *;
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    &__items{
+        padding: 1em 1.5em;
+        cursor: pointer;
+        transition: ease-in-out 200ms;
+        &--hilighted{
+            font-family: $title-font;
+            color: $neutral-color-1 ;
+            text-transform: uppercase;
+            background-color: $neutral-color-5;
+            border-radius: 2em;
+            &:hover{
+                color: $neutral-color-5;
+                background-color: adjust-color($neutral-color-5,$alpha:-0.7%);
+            }
+        }
+    }
+
+}
