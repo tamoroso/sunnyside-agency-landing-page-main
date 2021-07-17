@@ -25,6 +25,43 @@ footer{
         margin: 2em auto;
         color: $footer-bg;
     }
+    & li{
+        position: relative;
+        cursor: pointer;
+        transition: ease-in-out 200ms;
+    }
+    & li:hover{
+        color: $neutral-color-5;
+    }
+}
+
+.footer__nav li{
+    &::after{
+        content:"";
+        border-bottom : solid 4px white;
+        position: absolute;
+        bottom:-5px;
+        left:0;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition : transform 0.25s;
+    }
+    &:hover{
+        &::after{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes underline {
+        from{
+            transform : scaleX(0);
+        }
+        to{
+            transform: scaleX(1);
+        }
+    }
 }
 
 .footer__social{

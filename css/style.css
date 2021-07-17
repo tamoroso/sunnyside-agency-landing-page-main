@@ -33,26 +33,40 @@ body {
   top: 14%;
   margin: auto;
   text-align: center;
+  transform: translateY(0);
+  animation: 1s ease-in-out infinite alternate arrow-down;
+}
+@keyframes arrow-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px);
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   position: relative;
+  align-items: center;
   top: 0;
   width: 100%;
   color: white;
 }
 
 .nav-menu {
+  min-width: 40%;
+}
+.nav-menu ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
 .nav-menu__items {
   padding: 1em 1.5em;
+  position: relative;
   cursor: pointer;
-  transition: ease-in-out 200ms;
 }
 .nav-menu__items--hilighted {
   font-family: "Fraunces", serif;
@@ -64,6 +78,31 @@ body {
 .nav-menu__items--hilighted:hover {
   color: white;
   background-color: rgba(255, 255, 255, 0.3);
+  transition: ease-in-out 0.25s;
+}
+
+.nav-menu__items--underline::after {
+  content: "";
+  border-bottom: solid 4px white;
+  position: absolute;
+  bottom: 15px;
+  left: 21%;
+  width: 60%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+.nav-menu__items--underline:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .grid {
@@ -257,6 +296,38 @@ footer {
   max-width: 20%;
   margin: 2em auto;
   color: #458c7e;
+}
+.footer__nav li {
+  position: relative;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+.footer__nav li:hover {
+  color: white;
+}
+
+.footer__nav li::after {
+  content: "";
+  border-bottom: solid 4px white;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+.footer__nav li:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .footer__social {

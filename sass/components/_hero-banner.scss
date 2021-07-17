@@ -23,5 +23,16 @@
         top: 14%;
         margin: auto;
         text-align: center;
+        transform: translateY(0);
+        animation: 1s ease-in-out infinite alternate arrow-down;
+
+        @keyframes arrow-down{
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(50px);
+            }
+        }
     }
 }

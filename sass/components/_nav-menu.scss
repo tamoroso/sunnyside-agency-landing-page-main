@@ -2,13 +2,16 @@
 @use '../base/typography' as *;
 
 .nav-menu{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+    min-width: 40%;
+    & ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
     &__items{
         padding: 1em 1.5em;
+        position: relative;
         cursor: pointer;
-        transition: ease-in-out 200ms;
         &--hilighted{
             font-family: $title-font;
             color: $neutral-color-1 ;
@@ -18,8 +21,38 @@
             &:hover{
                 color: $neutral-color-5;
                 background-color: adjust-color($neutral-color-5,$alpha:-0.7%);
+                transition: ease-in-out 0.25s;
             }
         }
     }
 
+}
+
+.nav-menu__items--underline{
+    &::after{
+        content:"";
+        border-bottom : solid 4px white;
+        position: absolute;
+        bottom: 15px;
+        left: 21%;
+        width: 60%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition : transform 0.25s;
+    }
+    &:hover{
+        &::after{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes underline {
+        from{
+            transform : scaleX(0);
+        }
+        to{
+            transform: scaleX(1);
+        }
+    }
 }
