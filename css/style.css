@@ -236,7 +236,7 @@ body {
 @media screen and (max-width: 800px) {
   .grid__card--1 {
     background-image: url("../../images/mobile/image-graphic-design.jpg");
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
@@ -249,7 +249,7 @@ body {
 @media screen and (max-width: 800px) {
   .grid__card--2 {
     background-image: url("../../images/mobile/image-photography.jpg");
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }

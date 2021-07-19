@@ -111,7 +111,7 @@
             color: $primary-color-3;
             @include mobile-only{
                 background-image: url('../../images/mobile/image-graphic-design.jpg');
-                background-size: auto 100% ;
+                background-size: cover ;
                 background-repeat: no-repeat;
             }
         }
@@ -122,7 +122,7 @@
             color: $primary-color-4;
             @include mobile-only{
                 background-image: url('../../images/mobile/image-photography.jpg');
-                background-size: auto 100% ;
+                background-size: cover ;
                 background-repeat: no-repeat;
             }         
         }
