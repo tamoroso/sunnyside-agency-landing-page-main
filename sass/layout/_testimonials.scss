@@ -6,7 +6,7 @@
     height: 100vh;
     background-color: $bg-body;
     @include mobile-only{
-        height: fit-content;
+        height: auto;
     }
     & h1{
         font-family: $title-font;
