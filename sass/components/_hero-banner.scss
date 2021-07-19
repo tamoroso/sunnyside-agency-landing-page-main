@@ -1,5 +1,6 @@
 @use '../utilities/variables' as *;
 @use '../base/typography' as *;
+@use '../utilities/mixins' as *;
 
 .hero-banner{
     background-image: url('../../images/desktop/image-header.jpg');
@@ -7,7 +8,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    padding: 2.5em;
+    padding: 2.5em 1em;
+    @include mobile-only{
+        background-image: url('../../images/mobile/image-header.jpg');
+    }
     &__big-title{
         padding-top: 1.5em ;
         text-align: center;
@@ -16,6 +20,10 @@
         color: $neutral-color-5;
         text-transform: uppercase;
         letter-spacing: 0.2em;
+        @include mobile-only{
+            font-size: 40px;
+            text-align: center;
+        }
     }
     &__arrow-down{
         display: flex;

@@ -27,7 +27,7 @@
 
       <a id = "nav-menu-responsive__hamburger" href="javascript:void(0);" class="nav-menu-responsive__hamburger">
         <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/>
+          <path id="icon-path" d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/>
         </svg>
       </a>
       <nav id = "nav-menu-responsive" class="nav-menu-responsive">
@@ -51,8 +51,16 @@
       </p>
       <a class = "grid__button grid__button--yellow" href="#">Learn more</a>
     </div>
-    <img class = "grid__image" src="./images/desktop/image-transform.jpg" alt="Egg on yellow background">
-    <img class = "grid__image" src="./images/desktop/image-stand-out.jpg" alt="Red glass on red background">
+    <picture class = "grid__image grid__image--mobile-only">
+      <source media="(max-width : 799px)" srcset="./images/mobile/image-transform.jpg">
+      <source media="(min-width: 800px)" srcset="./images/desktop/image-transform.jpg">
+      <img  class = "grid__image grid__image--mobile-only" src="./images/desktop/image-transform.jpg" alt="Egg on yellow background">
+    </picture>
+    <picture class = "grid__image">
+      <source media="(max-width : 799px)" srcset="./images/mobile/image-stand-out.jpg">
+      <source media="(min-width: 800px)" srcset="./images/desktop/image-stand-out.jpg">
+      <img class = "grid__image" src="./images/desktop/image-stand-out.jpg" alt="Red glass on red background">
+    </picture>
     <div class="grid__text">
       <h1>Stand out to the right audience</h1>
       <p> Using a collaborative formula of designers, researchers, photographers, 
@@ -158,9 +166,9 @@
         </a>
       </div>
     </div>
-    <div class="attribution">
+    <div class="footer__attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/tamoroso">Thomas Amoroso</a>.
     </div>
   </footer>
   <script src="./javascript/hamburger-menu.js"></script>

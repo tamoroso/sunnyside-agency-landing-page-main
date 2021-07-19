@@ -1,12 +1,19 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 .gallery-container{
     display: flex;
     padding-bottom: 3em;
+    @include mobile-only{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 49%) ;
+    }
     & img{
         object-fit: cover;
         max-width: 100%;
         justify-content: center;
         align-items: center;
+        min-height: 100%;
     }
 }

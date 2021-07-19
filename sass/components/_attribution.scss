@@ -1,0 +1,16 @@
+@use '../utilities/variables' as *;
+
+.footer__attribution{
+    text-align: center;
+    font-size: 14px;
+    padding: 1em 0;
+    &,
+    & a{
+        color: $footer-bg;
+        transition: color 250ms ease-in-out;
+    }
+    & a:hover{
+        color: white;
+    }
+}
+

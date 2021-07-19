@@ -1,4 +1,5 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 footer{
     background: adjust-color($color: $footer-bg, $saturation: 30%, $alpha:-0.5%);  
@@ -24,6 +25,9 @@ footer{
         max-width: 20%;
         margin: 2em auto;
         color: $footer-bg;
+        @include mobile-only{
+            max-width: 70%;
+        }
     }
     & li{
         position: relative;
@@ -69,6 +73,9 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 6em;
+    @include mobile-only{
+        margin-top: 3em;
+    }
     & a{
         padding : 0 1em;
     }

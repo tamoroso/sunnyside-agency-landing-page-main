@@ -1,8 +1,13 @@
 @use '../base/typography' as *;
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 .testimonials{
-    height: 75vh;
+    height: 100vh;
+    background-color: $bg-body;
+    @include mobile-only{
+        height: fit-content;
+    }
     & h1{
         font-family: $title-font;
         color: $neutral-color-4;
@@ -11,7 +16,12 @@
         font-size: 18px;
         font-weight: 800;
         text-align: center;
-        margin-top: 10em;
+        padding-top: 10em;
+        @include mobile-only{
+            font-size: 16px;
+            padding-top: 4em;
+            padding-bottom: 1em;
+        }
     }
     & p{
         color: $neutral-color-2;
@@ -33,5 +43,10 @@
         margin: 0 9em;
         text-align: center;
         justify-content: center;
+        @include mobile-only{
+            flex-direction: column;
+            margin: 0 1em 0em 1em;
+            padding-bottom: 2em;
+        }
     }
 }
