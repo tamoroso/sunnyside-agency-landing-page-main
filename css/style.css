@@ -275,7 +275,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .testimonials {
-    height: fit-content;
+    height: auto;
   }
 }
 .testimonials h1 {
